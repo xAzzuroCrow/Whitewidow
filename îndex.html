@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WHITE WIDOW | Premium Purple Cannabis</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #2A0B4D; /* Dunkles Lila */
+            --secondary: #A020F0; /* Neon-Purple */
+            --accent: #FFD700; /* Gold */
+            --black: #000000;
+            --white: #FFFFFF;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes purpleGlow {
+            0% { text-shadow: 0 0 5px var(--secondary); }
+            50% { text-shadow: 0 0 20px var(--secondary); }
+            100% { text-shadow: 0 0 5px var(--secondary); }
+        }
+        body {
+            font-family: 'Courier New', monospace;
+            background: var(--black);
+            color: var(--white);
+            margin: 0;
+            padding: 0;
+            animation: fadeIn 1.5s;
+        }
+        .loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--black);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+        .loading-screen h1 {
+            color: var(--secondary);
+            animation: purpleGlow 2s infinite;
+        }
+        .header {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1600857544200-b2f666a9a2ec?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            padding: 50px 20px;
+            text-align: center;
+            border-bottom: 3px solid var(--secondary);
+        }
+        .logo {
+            font-size: 4em;
+            color: var(--secondary);
+            text-shadow: 0 0 15px var(--primary);
+            margin: 0;
+            transition: transform 0.3s;
+        }
+        .logo:hover {
+            transform: scale(1.05);
+        }
+        .slogan {
+            font-style: italic;
+            color: var(--accent);
+        }
+        .menu {
+            background: var(--primary);
+            padding: 15px;
+            text-align: center;
+            border-bottom: 1px solid var(--secondary);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .menu a {
+            color: var(--white);
+            margin: 0 20px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        .menu a:hover {
+            color: var(--secondary);
+        }
+        .container {
+            padding: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .category-tabs {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+        .tab {
+            padding: 10px 20px;
+            background: var(--primary);
+            margin: 5px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: all 0.3s;
+        }
+        .tab.active {
+            background: var(--secondary);
+            font-weight: bold;
+        }
+        .tab:hover {
+            background: var(--secondary);
+        }
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .product {
+            background: rgba(42, 11, 77, 0.7);
+            border: 1px solid var(--secondary);
+            padding: 20px;
+            border-radius: 10px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .product:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(160, 32, 240, 0.3);
+        }
+        .product h3 {
+            color: var(--secondary);
+            margin-top: 0;
+        }
+        .price {
+            color: var(--accent);
+            font-weight: bold;
+        }
+        .discount {
+            color: var(--secondary);
+            font-size: 0.8em;
+            text-decoration: line-through;
+        }
+        .footer {
+            background: var(--primary);
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+            border-top: 1px solid var(--secondary);
+        }
+        .social-icons a {
+            color: var(--white);
+            margin: 0 10px;
+            font-size: 1.5em;
+            transition: color 0.3s;
+        }
+        .social-icons a:hover {
+            color: var(--secondary);
+        }
+        @media (max-width: 768px) {
+            .product-grid {
+                grid-template-columns: 1fr;
+            }
+            .menu a {
+                margin: 0 10px;
+                font-size: 0.9em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="loading-screen">
+        <h1>WHITE WIDOW</h1>
+    </div>
+
+    <div class="header">
+        <h1 class="logo">WHITE WIDOW</h1>
+        <p class="slogan">"From Soil to Smoke – The Finest Purple Strains"</p>
+    </div>
+    
+    <div class="menu">
+        <a href="#home"><i class="fas fa-home"></i> Home</a>
+        <a href="#shop"><i class="fas fa-cannabis"></i> Shop</a>
+        <a href="#strains"><i class="fas fa-prescription-bottle-alt"></i> Strains</a>
+        <a href="#contact"><i class="fas fa-phone-alt"></i> Contact</a>
+    </div>
+    
+    <div class="container" id="home">
+        <h2>Welcome to White Widow</h2>
+        <p>Los Santos' premier destination for <strong style="color:var(--secondary)">exotic purple cannabis</strong>. Experience the finest strains with unique effects.</p>
+    </div>
+    
+    <div class="container" id="shop">
+        <h2><i class="fas fa-cannabis"></i> Product Menu</h2>
+        
+        <div class="category-tabs">
+            <div class="tab active" onclick="filterProducts('all')">All Products</div>
+            <div class="tab" onclick="filterProducts('legal')">Legal CBD</div>
+            <div class="tab" onclick="filterProducts('premium')">Premium Strains</div>
+            <div class="tab" onclick="filterProducts('accessories')">Accessories</div>
+        </div>
+        
+        <div class="product-grid">
+            <div class="product" data-category="legal">
+                <h3>CBD Oil 1000mg</h3>
+                <p>Premium hemp extract</p>
+                <p class="price">$29.99</p>
+            </div>
+            
+            <div class="product" data-category="premium">
+                <h3>Purple Widow</h3>
+                <p>+Euphoria, -Anxiety (RP Effect)</p>
+                <p class="discount">$89.99</p>
+                <p class="price">$69.99 <span style="color:var(--secondary);font-size:0.8em;">(VIP Discount)</span></p>
+            </div>
+            
+            <div class="product" data-category="premium">
+                <h3>Grape Ape</h3>
+                <p>+Relaxation, -Pain</p>
+                <p class="price">$59.99</p>
+            </div>
+            
+            <div class="product" data-category="accessories">
+                <h3>Purple Glass Bong</h3>
+                <p>Limited edition</p>
+                <p class="price">$149.99</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container" id="strains">
+        <h2><i class="fas fa-prescription-bottle-alt"></i> Purple Strain Guide</h2>
+        <div class="product-grid">
+            <div class="product">
+                <h3>Purple Widow</h3>
+                <p><strong>Effects:</strong> +Euphoria, -Anxiety</p>
+                <p><strong>Flavor:</strong> Grape, Earthy</p>
+                <p><strong>THC:</strong> 24%</p>
+            </div>
+            <div class="product">
+                <h3>Grape Ape</h3>
+                <p><strong>Effects:</strong> +Relaxation, -Pain</p>
+                <p><strong>Flavor:</strong> Berry, Sweet</p>
+                <p><strong>THC:</strong> 22%</p>
+            </div>
+            <div class="product">
+                <h3>Purple Haze</h3>
+                <p><strong>Effects:</strong> +Creativity, -Stress</p>
+                <p><strong>Flavor:</strong> Citrus, Pine</p>
+                <p><strong>THC:</strong> 21%</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container" id="contact">
+        <h2><i class="fas fa-phone-alt"></i> Contact</h2>
+        <p><i class="fas fa-envelope"></i> Email: <strong>purple@whitewidow-ls.com</strong></p>
+        <p><i class="fab fa-twitter"></i> Bleeter: <strong>@PurpleWidowLS</strong></p>
+        <p><i class="fas fa-map-marker-alt"></i> Location: <strong>Vinewood Hills, LS</strong></p>
+    </div>
+    
+    <div class="footer">
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-snapchat-ghost"></i></a>
+        </div>
+        <p>© 2024 WHITE WIDOW | LOS SANTOS | LEGAL DISCLAIMER: For GTA-RP purposes only.</p>
+    </div>
+
+    <script>
+        // Ladeanimation ausblenden
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                document.querySelector('.loading-screen').style.opacity = '0';
+                setTimeout(function() {
+                    document.querySelector('.loading-screen').style.display = 'none';
+                }, 500);
+            }, 1500);
+        });
+        
+        // Produktfilter
+        function filterProducts(category) {
+            const products = document.querySelectorAll('.product');
+            const tabs = document.querySelectorAll('.tab');
+            
+            tabs.forEach(tab => tab.classList.remove('active'));
+            event.target.classList.add('active');
+            
+            products.forEach(product => {
+                if (category === 'all' || product.dataset.category === category) {
+                    product.style.display = 'block';
+                } else {
+                    product.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>
